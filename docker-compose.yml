@@ -1,0 +1,18 @@
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: ems-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ems_db
+      MYSQL_USER: ems_user
+      MYSQL_PASSWORD: ems_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - ems_mysql_data:/var/lib/mysql
+
+volumes:
+  ems_mysql_data:

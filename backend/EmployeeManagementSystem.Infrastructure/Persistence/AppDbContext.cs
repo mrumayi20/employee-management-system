@@ -1,6 +1,7 @@
 using EmployeeManagementSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace EmployeeManagementSystem.Infrastructure.Persistence;
 
 public class AppDbContext : DbContext
@@ -11,6 +12,8 @@ public class AppDbContext : DbContext
     public DbSet<Department> Departments => Set<Department>();
     public DbSet<Attendance> Attendances => Set<Attendance>();
     public DbSet<SalaryRecord> SalaryRecords => Set<SalaryRecord>();
+
+    public DbSet<User> Users => Set<User>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -54,5 +57,16 @@ public class AppDbContext : DbContext
         {
             e.HasIndex(x => new { x.EmployeeId, x.Year, x.Month }).IsUnique();
         });
+
+        modelBuilder.Entity<User>(e =>
+        {
+            e.Property(x => x.FullName).HasMaxLength(120).IsRequired();
+            e.Property(x => x.Email).HasMaxLength(120).IsRequired();
+            e.HasIndex(x => x.Email).IsUnique();
+
+            e.Property(x => x.PasswordHash).IsRequired();
+            e.Property(x => x.Role).HasMaxLength(30).IsRequired();
+        });
+
     }
 }

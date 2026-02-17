@@ -4,8 +4,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
+using EmployeeManagementSystem.Application.Reports;
+using EmployeeManagementSystem.Infrastructure.Reports;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IReportService, ReportService>();
 // Controllers 
 builder.Services.AddControllers();
 

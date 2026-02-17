@@ -1,0 +1,94 @@
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  background: #fafafa;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f3f3f3;
+}
+
+.btnPrimary {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.btnPrimary:hover {
+  background: #222;
+}
+
+.input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  background: #fafafa;
+}
+
+td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.error {
+  color: #b00020;
+  border: 1px solid #f2b8b8;
+  background: #fff5f6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .grid2 {
+    grid-template-columns: 1fr !important;
+  }
+  .grid3 {
+    grid-template-columns: 1fr !important;
+  }
+}

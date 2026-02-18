@@ -83,4 +83,3 @@ Why: keeps business rules independent of frameworks/UI/DB; easier testing; easie
 3. Application depends on Domain
 
 POST /api/auth/login → returns JWT token
-dotnet run --project EmployeeManagementSystem.Api

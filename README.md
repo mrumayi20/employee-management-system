@@ -14,6 +14,13 @@
 - .NET SDK 8
 - Node.js (18+ recommended)
 
+## Application Demo
+
+A complete walkthrough of the Employee Management System is available below:
+
+🔗 **Loom Video Link:**  
+https://www.loom.com/share/a1daf28157b04115ba9e71ee8262801a
+
 ## Run Database
 
 From repo root:
